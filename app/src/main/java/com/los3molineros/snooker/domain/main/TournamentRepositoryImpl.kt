@@ -90,17 +90,29 @@ class TournamentRepositoryImpl(
             throw InternalError("No data")
         }
 
+        // Round Information
+        val roundList = remoteEventsDataSource.getRoundsEvent(id)
+        if (roundList.isEmpty()) {
+            throw InternalError("No data")
+        }
+
         // Loop and return all player and event names
         for (match in matchList) {
+            var player1: PlayerEntity? = PlayerEntity()
+            var player2: PlayerEntity? = PlayerEntity()
 
             // GetPlayers
-            val player1 = getPlayerFromId(match.Player1ID)
-            val player2 = getPlayerFromId(match.Player2ID)
+            if (match.Player1ID != 376) {
+                player1 = getPlayerFromId(match.Player1ID)
+            }
+
+            if (match.Player2ID != 376) {
+                player2 = getPlayerFromId(match.Player2ID)
+            }
 
             // GetRounds
             var roundName = ""
-            val roundEventList =
-                remoteEventsDataSource.getRoundsEvent(id).filter { it.Round == match.Round }
+            val roundEventList = roundList.filter { it.Round == match.Round }
 
             // RoundName
             if (roundEventList.isNotEmpty()) {
