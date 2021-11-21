@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/rankingFragment"
+        android:icon="@drawable/laurel_wreath"
+        android:title="@string/Ranking" />
+
+    <item
+        android:id="@+id/resultsFragment"
+        android:icon="@drawable/snooker"
+        android:title="@string/Results" />
+
+    <item
+        android:id="@+id/contactFragment"
+        android:icon="@drawable/ic_baseline_person_24"
+        android:title="@string/contact_us" />
+</menu>

@@ -1,3 +1,33 @@
 <resources>
     <string name="app_name">Snooker</string>
+    <string name="loading">Loading</string>
+    <string name="Ranking">Ranking</string>
+    <string name="Results">Events</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="world_ranking">World Ranking</string>
+    <string name="_1_year_ranking">1 Year Ranking</string>
+    <string name="event">Event Detail</string>
+    <string name="matches">Matches</string>
+    <string name="location">LOCATION</string>
+    <string name="venue">VENUE</string>
+    <string name="start_date">START DATE</string>
+    <string name="finish_date">FINISH DATE</string>
+    <string name="total_prize_money">TOTAL PRIZE</string>
+    <string name="winner_prize_money">WINNER PRIZE</string>
+    <string name="format">FORMAT</string>
+    <string name="current_champion">CURRENT CHAMPION</string>
+    <string name="header_match_number">#</string>
+    <string name="header_match_player1">PLAYER1</string>
+    <string name="header_match_player2">PLAYER2</string>
+    <string name="nationality">NATIONALITY</string>
+    <string name="born">BORN</string>
+    <string name="first_as_pro">FIRST YEAR AS PRO</string>
+    <string name="bio_page">Link to Bio Page</string>
+    <string name="rate_the_app">Help us rating the app</string>
+    <string name="or">OR</string>
+    <string name="improves">Suggest improvements for the app</string>
+    <string name="rate">RATE</string>
+    <string name="send">SEND</string>
+    <string name="e_mail">Your e-Mail</string>
+    <string name="comments">Your comments here!</string>
 </resources>

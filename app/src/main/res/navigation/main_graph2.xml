@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/tournamentDetailFragment">
+    <fragment
+        android:id="@+id/tournamentDetailFragment"
+        android:name="com.los3molineros.snooker.ui.navigation.tournament.TournamentDetailFragment"
+        android:label="fragment_tournament_detail"
+        tools:layout="@layout/fragment_tournament_detail" >
+        <action
+            android:id="@+id/action_tournamentDetailFragment_to_tournamentMatchesFragment"
+            app:destination="@id/tournamentMatchesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tournamentMatchesFragment"
+        android:name="com.los3molineros.snooker.ui.navigation.tournament.TournamentMatchesFragment"
+        android:label="fragment_tournament_matches"
+        tools:layout="@layout/fragment_tournament_matches" >
+        <action
+            android:id="@+id/action_tournamentMatchesFragment_to_tournamentDetailFragment"
+            app:destination="@id/tournamentDetailFragment" />
+    </fragment>
+</navigation>
