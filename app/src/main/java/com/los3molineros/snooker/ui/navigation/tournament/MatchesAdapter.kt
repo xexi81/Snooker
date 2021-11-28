@@ -99,13 +99,14 @@ class MatchesAdapter(private var matchesUIList: List<MatchUI>) :
                         binding?.ivMatchDetail?.visibility = View.GONE
                     } else {
                         binding?.ivMatchDetail?.visibility = View.VISIBLE
+
+                        binding?.item?.setOnClickListener {
+                            val intent = Intent(binding.root.context, MatchDetailActivity::class.java)
+                            intent.putExtra("MATCH", matchesUIList)
+                            it.context.startActivity(intent)
+                        }
                     }
 
-                    binding?.item?.setOnClickListener {
-                        val intent = Intent(binding.root.context, MatchDetailActivity::class.java)
-                        intent.putExtra("MATCH", matchesUIList)
-                        it.context.startActivity(intent)
-                    }
                 }
                 2 -> {
                     binding2?.txtRound?.text = matchesUIList.RoundName
@@ -119,12 +120,12 @@ class MatchesAdapter(private var matchesUIList: List<MatchUI>) :
                         binding2?.ivMatchDetail?.visibility = View.GONE
                     } else {
                         binding2?.ivMatchDetail?.visibility = View.VISIBLE
-                    }
 
-                    binding2?.item?.setOnClickListener {
-                        val intent = Intent(binding2.root.context, MatchDetailActivity::class.java)
-                        intent.putExtra("MATCH", matchesUIList)
-                        it.context.startActivity(intent)
+                        binding2?.item?.setOnClickListener {
+                            val intent = Intent(binding2.root.context, MatchDetailActivity::class.java)
+                            intent.putExtra("MATCH", matchesUIList)
+                            it.context.startActivity(intent)
+                        }
                     }
                 }
                 3 -> {
@@ -138,13 +139,14 @@ class MatchesAdapter(private var matchesUIList: List<MatchUI>) :
                         binding3?.ivMatchDetail?.visibility = View.GONE
                     } else {
                         binding3?.ivMatchDetail?.visibility = View.VISIBLE
+
+                        binding3?.item?.setOnClickListener {
+                            val intent = Intent(binding3.root.context, MatchDetailActivity::class.java)
+                            intent.putExtra("MATCH", matchesUIList)
+                            it.context.startActivity(intent)
+                        }
                     }
 
-                    binding3?.item?.setOnClickListener {
-                        val intent = Intent(binding3.root.context, MatchDetailActivity::class.java)
-                        intent.putExtra("MATCH", matchesUIList)
-                        it.context.startActivity(intent)
-                    }
                 }
                 else -> {
                     binding4?.txtNumero?.text = matchesUIList.Number.toString()
@@ -157,12 +159,12 @@ class MatchesAdapter(private var matchesUIList: List<MatchUI>) :
                         binding4?.ivMatchDetail?.visibility = View.GONE
                     } else {
                         binding4?.ivMatchDetail?.visibility = View.VISIBLE
-                    }
 
-                    binding4?.item?.setOnClickListener {
-                        val intent = Intent(binding4.root.context, MatchDetailActivity::class.java)
-                        intent.putExtra("MATCH", matchesUIList)
-                        it.context.startActivity(intent)
+                        binding4?.item?.setOnClickListener {
+                            val intent = Intent(binding4.root.context, MatchDetailActivity::class.java)
+                            intent.putExtra("MATCH", matchesUIList)
+                            it.context.startActivity(intent)
+                        }
                     }
                 }
             }

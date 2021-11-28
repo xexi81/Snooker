@@ -46,7 +46,14 @@ class TournamentDetailFragment : Fragment(R.layout.fragment_tournament_detail) {
     }
 
     private fun initUI() {
+        initListener()
         initSubscribers()
+    }
+
+    private fun initListener() {
+        binding.ivCross.setOnClickListener {
+            activity?.finish()
+        }
     }
 
     private fun initSubscribers() {

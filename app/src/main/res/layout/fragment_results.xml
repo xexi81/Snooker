@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#4A4A4A"
     tools:context=".ui.navigation.results.ResultsFragment">
 
 
@@ -27,14 +28,28 @@
         app:trailingcircular_dotsRadius="11dp"
         app:trailingcircular_noOfTrailingDots="5" />
 
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/events"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_margin="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
     <View
         android:id="@+id/view1"
         android:layout_width="match_parent"
         android:layout_height="5dp"
         android:background="#A13030"
+        android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/txtTitle"/>
 
     <LinearLayout
         android:id="@+id/ll1"

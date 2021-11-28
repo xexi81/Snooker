@@ -40,11 +40,18 @@ class TournamentMatchesFragment : Fragment(R.layout.fragment_tournament_matches)
     }
 
     private fun initUI() {
-        initFormaters()
+        initFormatters()
+        initListeners()
         initSubscribers()
     }
 
-    private fun initFormaters() {
+    private fun initListeners() {
+        binding.ivCross.setOnClickListener {
+            activity?.finish()
+        }
+    }
+
+    private fun initFormatters() {
         binding.progressBar.visibility = View.VISIBLE
 
         adapter = MatchesAdapter(listOf())
