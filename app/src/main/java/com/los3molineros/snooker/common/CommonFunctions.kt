@@ -6,9 +6,12 @@ import android.graphics.PorterDuff
 import android.util.Log
 import android.view.MotionEvent
 import android.view.View
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 import com.los3molineros.snooker.common.AppConstants.TAG_LOG
 import com.los3molineros.snooker.data.model.Result
 import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.tasks.await
 import java.net.InetSocketAddress
 import java.net.Socket
 import java.text.SimpleDateFormat
@@ -33,11 +36,14 @@ object CommonFunctions {
         }
     }
 
-    fun getCurrentSeason(): Int {
-        val date = Date()
-        val actualYear = SimpleDateFormat("yyyy")
+    suspend fun getCurrentSeason(): Int {
+        val db = Firebase.firestore
 
-        return actualYear.format(date).toInt()
+        val result = db.collection("params").document("params").get().await()
+        val resultYear = result.data?.values
+
+        val year = resultYear?.elementAt(0) as Long
+        return year.toInt()
     }
 
     @SuppressLint("ClickableViewAccessibility")
