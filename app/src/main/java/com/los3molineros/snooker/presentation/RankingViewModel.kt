@@ -21,7 +21,7 @@ class RankingViewModel(private val repo: RankingRepository): ViewModel() {
 
 
 class RankingViewModelFactory(private val repo: RankingRepository): ViewModelProvider.Factory {
-    override fun <T : ViewModel?> create(modelClass: Class<T>): T {
+    override fun <T : ViewModel> create(modelClass: Class<T>): T {
         return modelClass.getConstructor(RankingRepository::class.java).newInstance(repo)
     }
 }

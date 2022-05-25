@@ -6,6 +6,7 @@ import android.graphics.PorterDuff
 import android.util.Log
 import android.view.MotionEvent
 import android.view.View
+import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.los3molineros.snooker.common.AppConstants.TAG_LOG
@@ -37,6 +38,9 @@ object CommonFunctions {
     }
 
     suspend fun getCurrentSeason(): Int {
+        val auth = Firebase.auth
+        auth.signInAnonymously().await()
+
         val db = Firebase.firestore
 
         val result = db.collection("params").document("params").get().await()

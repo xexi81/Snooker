@@ -21,7 +21,7 @@ class ResultsViewModel(private val repo: EventRepository) : ViewModel() {
 
 
 class ResultsViewModelFactory(private val repo: EventRepository) : ViewModelProvider.Factory {
-    override fun <T : ViewModel?> create(modelClass: Class<T>): T {
+    override fun <T : ViewModel> create(modelClass: Class<T>): T {
         return modelClass.getConstructor(EventRepository::class.java).newInstance(repo)
     }
 }

@@ -26,7 +26,7 @@ class MainViewModel(private val repo: MainRepository) : ViewModel() {
 
 
 class MainViewModelFactory(private val repo: MainRepository) : ViewModelProvider.Factory {
-    override fun <T : ViewModel?> create(modelClass: Class<T>): T {
+    override fun <T : ViewModel> create(modelClass: Class<T>): T {
         return modelClass.getConstructor(MainRepository::class.java).newInstance(repo)
     }
 }

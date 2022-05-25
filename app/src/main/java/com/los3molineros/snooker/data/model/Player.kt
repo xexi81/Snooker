@@ -34,21 +34,21 @@ data class PlayerResponse(
 data class PlayerEntity(
     @PrimaryKey
     @ColumnInfo(name = "id")
-    val id: Int = 0,
+    var id: Int = 0,
     @ColumnInfo(name = "name")
-    val name: String = "",
+    var name: String = "",
     @ColumnInfo(name = "nationality")
-    val nationality: String = "",
+    var nationality: String = "",
     @ColumnInfo(name = "sex")
-    val sex: String = "",
+    var sex: String = "",
     @ColumnInfo(name = "bioPage")
-    val bioPage: String = "",
+    var bioPage: String = "",
     @ColumnInfo(name = "born")
-    val born: String = "",
+    var born: String = "",
     @ColumnInfo(name = "photo")
-    val photo: String = "",
+    var photo: String = "",
     @ColumnInfo(name = "firstSeasonAsPro")
-    val firstSeasonAsPro: Int = 0,
+    var firstSeasonAsPro: Int = 0,
 )
 
 

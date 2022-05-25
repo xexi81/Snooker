@@ -41,7 +41,7 @@ class TournamentViewModel(private val repo: TournamentRepository) : ViewModel() 
 
 class TournamentViewModelFactory(private val repo: TournamentRepository) :
     ViewModelProvider.Factory {
-    override fun <T : ViewModel?> create(modelClass: Class<T>): T {
+    override fun <T : ViewModel> create(modelClass: Class<T>): T {
         return modelClass.getConstructor(TournamentRepository::class.java).newInstance(repo)
     }
 }

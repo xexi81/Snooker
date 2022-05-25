@@ -20,7 +20,7 @@ class PlayerViewModel(private val repo: PlayerRepository): ViewModel() {
 }
 
 class PlayerViewModelFactory(private val repo: PlayerRepository): ViewModelProvider.Factory {
-    override fun <T : ViewModel?> create(modelClass: Class<T>): T {
+    override fun <T : ViewModel> create(modelClass: Class<T>): T {
         return modelClass.getConstructor(PlayerRepository::class.java).newInstance(repo)
     }
 }
