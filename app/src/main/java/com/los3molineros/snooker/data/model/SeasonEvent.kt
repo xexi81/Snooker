@@ -28,7 +28,7 @@ data class SeasonEventResponse(
     val Format: Int = 0,
     val Twitter: String = "",
     val HashTag: String = "",
-    val ConversionRate: Int = 0,
+    val ConversionRate: Double = 0.0,
     val AllRoundsAdded: Boolean = false,
     val PhotoURLs: String = "",
     val NumCompetitors: Int = 0,

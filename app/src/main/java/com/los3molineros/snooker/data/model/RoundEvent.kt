@@ -15,7 +15,7 @@ data class RoundEvent (
     val SeedGetsHalf: Int = 0,
     val ActualMoney: Int = 0,
     val Currency: String = "",
-    val ConversionRate: Int = 0,
+    val ConversionRate: Double = 0.0,
     val Points: Int = 0,
     val SeedPoints: Int = 0,
         )
