@@ -7,27 +7,35 @@ import com.los3molineros.snooker.data.model.*
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
+import retrofit2.http.Headers
 import retrofit2.http.Query
 
 interface WebService {
+    @Headers("x-requested-by: SergioAndroid")
     @GET(".")
     suspend fun getPlayers(@Query("t") t: Int = 10, @Query("st") st: String = "b", @Query("s") s: Int): List<PlayerResponse>
 
+    @Headers("x-requested-by: SergioAndroid")
     @GET(".")
     suspend fun getPlayerById(@Query("p") p: Int): List<PlayerResponse>
 
+    @Headers("x-requested-by: SergioAndroid")
     @GET(".")
     suspend fun getRanking(@Query("rt") rt: String, @Query("s") s: Int): List<RankingResponse>
 
+    @Headers("x-requested-by: SergioAndroid")
     @GET(".")
     suspend fun getSeasonEvents(@Query("t") t: Int = 5, @Query("s") s: Int): List<SeasonEventResponse>
 
+    @Headers("x-requested-by: SergioAndroid")
     @GET(".")
     suspend fun getEvent(@Query("e") e: Int ): List<SeasonEventResponse>
 
+    @Headers("x-requested-by: SergioAndroid")
     @GET(".")
     suspend fun getRoundsEvent(@Query("t") t: Int = 12, @Query("e") e: Int): List<RoundEvent>
 
+    @Headers("x-requested-by: SergioAndroid")
     @GET(".")
     suspend fun getMatchesEvent(@Query("t") t: Int = 6, @Query("e") e: Int): List<MatchResponse>
 }
