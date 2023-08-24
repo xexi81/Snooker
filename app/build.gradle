@@ -9,12 +9,12 @@ plugins {
 }
 
 android {
-    compileSdk 31
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.los3molineros.snooker"
         minSdk 23
-        targetSdk 31
+        targetSdk 34
         versionCode 6
         versionName "1.1.4"
 
